@@ -46,7 +46,7 @@ calories-tracker/ <br/>
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/calorie-tracker.git
+git clone https://github.com/akhil-roy/calorie-tracker.git
 cd calorie-tracker
 
 # Set up virtual environment
