@@ -29,12 +29,12 @@ A full-stack Django web application that allows users to log meals, monitor calo
 
 ## 📁 Project Structure
 
-calorietracker/ <br/>
-├── users/ # Registration and profile <br/>
+calories-tracker/ <br/>
+├── user/ # Registration and profile <br/>
 ├── meals/ # Meal CRUD and dashboard <br/>
 ├── templates/ # HTML templates <br/>
 ├── static/ # CSS, JS, assets <br/>
-├── calorietracker/ # Project config <br/>
+├── calories_tracker/ # Project config <br/>
 └── manage.py<br/>
 
 
