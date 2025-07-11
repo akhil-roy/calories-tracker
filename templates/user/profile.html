@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %} Profile - Calories Tracker {% endblock %}
+{% block content %}
+<h1>{{ user.username }}'s Profile</h1>
+<div class="d-flex profile-wrapper">
+    <div class="text-left">
+        <h2>Username : {{ user.username }}</h2>
+        <h3>Expected Calories : {{ user.profile.expected_calories }}</h3>
+    </div>
+    
+    <form class="calories-form" method="post">
+        {% csrf_token %}
+        <div class="d-flex">
+            <h5>{{form.expected_calories.label}}</h5>
+            {{ form.expected_calories }}
+        </div>
+        <button class="btn btn-secondary" type="submit">Update</button>
+    </form>
+</div>
+
+<form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger" type="submit">Logout</button>
+</form>
+{% endblock %}

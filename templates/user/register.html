@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %} SignUp - Calories Tracker {% endblock %}
+{% block content %}
+<h1>SignUp Page</h1>
+<form class="register-form" method="post">
+    {% csrf_token %}
+    <div>
+        <h5>{{form.username.label}}</h5>
+        {{form.username}}
+    </div>
+    <div>
+        <h5>{{form.email.label}}</h5>
+        {{form.email}}
+    </div>
+    <div>
+        <h5>{{form.password1.label}}</h5>
+        {{form.password1}}
+    </div>
+    <div>
+        <h5>{{form.password2.label}}</h5>
+        {{form.password2}}
+    </div>
+    <button type="submit">Register</button>
+</form>
+
+<p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+
+{% endblock %}
